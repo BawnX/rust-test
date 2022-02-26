@@ -1,0 +1,41 @@
+### Health request
+GET http://localhost:8000/health HTTP/1.1
+
+### User v1 request
+GET localhost:8000/v1/user/236c7e3b-455c-4c0e-9e79-ce57a36a8868 HTTP/1.1
+
+### User v1 bad request
+GET localhost:8000/v1/user/6068c7a5-0ac0-46 HTTP/1.1
+
+### Create user
+POST localhost:8000/v1/user/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": "236c7e3b-455c-4c0e-9e79-ce57a36a8868",
+  "name": "Yuki",
+  "birth_date": "2020-02-03",
+  "custom_data": {
+    "random": 4
+  }
+}
+
+### Update User v1
+PUT localhost:8000/v1/user/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": "236c7e3b-455c-4c0e-9e79-ce57a36a8868",
+  "name": "Yuki",
+  "birth_date": "2020-02-03",
+  "custom_data": {
+    "random": 7123123
+  }
+}
+
+### New User v1 request
+GET localhost:8000/v1/user/236c7e3b-455c-4c0e-9e79-ce57a36a8868 HTTP/1.1
+
+
+### Delete User
+DELETE localhost:8000/v1/user/236c7e3b-455c-4c0e-9e79-ce57a36a8868 HTTP/1.1
